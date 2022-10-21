@@ -1,0 +1,10 @@
+.service-card{
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.service-card img{
+    width: 100%;
+}
+.service-info{
+    margin-left: 10px;
+}
