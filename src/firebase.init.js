@@ -12,7 +12,7 @@ const firebaseConfig = {
     storageBucket: "car-project-service-center.appspot.com",
     messagingSenderId: "1054592716919",
     appId: "1:1054592716919:web:a25da1f45d0b4514bff672"
-};
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
