@@ -44,7 +44,7 @@ const Login = () => {
         navigate(from, { replace: true });
     }
 
-    
+
     return (
         <div className='w-50 mx-auto mt-5'>
             <Form onSubmit={handleSubmit}>

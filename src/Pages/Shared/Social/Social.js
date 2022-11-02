@@ -21,7 +21,7 @@ const Social = () => {
         <div>
             <div className='d-flex align-items-center'>
                 <div style={{ height: '1px' }} className='bg-primary w-50'></div>
-                <p className='pt-2 px-2'>or</p>
+                <p className='px-2 pt-2'>or</p>
                 <div style={{ height: '1px' }} className='bg-primary w-50'></div>
             </div>
 

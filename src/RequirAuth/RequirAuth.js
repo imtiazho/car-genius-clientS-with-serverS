@@ -13,6 +13,14 @@ const RequirAuth = ({children}) => {
     if(!user){
         return <Navigate to="/login" state={{ from: location }} />;
     }
+    if(!user.emailVerified){
+        return <div>
+            <h3 className='text-danger'>Your email is not verified</h3>
+            <p>Please Verify your email</p>
+            <button>Send Verification</button>
+        </div>
+    }
+    
     return children;
 };
 
