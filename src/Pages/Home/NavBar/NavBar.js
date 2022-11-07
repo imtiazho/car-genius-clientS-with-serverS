@@ -39,7 +39,7 @@ const NavBar = () => {
                             </NavDropdown>
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="/about">About</Nav.Link>
+                            <Nav.Link as={Link} to="/manageServices">Manage</Nav.Link>
                             { user ? 
                             <Nav.Link onClick={userSignOut} as={Link} to="/login">
                                 SignOut
