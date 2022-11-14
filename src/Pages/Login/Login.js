@@ -5,6 +5,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Social from '../Shared/Social/Social';
+import axios from 'axios';
+
+
 
 const Login = () => {
     const navigate = useNavigate()
@@ -26,11 +29,16 @@ const Login = () => {
     const passwordRef = useRef('')
 
 
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault()
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password)
+
+
+        const { data } = await axios.post('http://localhost:5000/login', { email })
+        localStorage.setItem('token', data)
+        navigate(from, { replace: true });
     }
 
     const resetPassword = async () => {
@@ -41,7 +49,7 @@ const Login = () => {
 
     let from = location.state?.from?.pathname || "/";
     if (user) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
 

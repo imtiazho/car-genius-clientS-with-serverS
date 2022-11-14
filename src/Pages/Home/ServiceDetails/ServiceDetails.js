@@ -15,7 +15,7 @@ const ServiceDetails = () => {
     return (
         <div>
             <h1>This is service details of {service?.name}</h1>
-            <Link to='/checkout'>Proceed CheckOut</Link>
+            <Link to={`/checkout/${serviceId}`}>Proceed CheckOut</Link>
         </div>
     );
 };
